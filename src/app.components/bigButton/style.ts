@@ -7,5 +7,5 @@ export const Button = styled.button<{ color: string }>`
   border-radius: 100px;
   font-size: 1.25rem;
 
-  padding: 16px 28px;
+  padding: 12px 28px;
 `;
