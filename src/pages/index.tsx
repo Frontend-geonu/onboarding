@@ -23,7 +23,9 @@ const Home: React.FC = () => {
       </Head>
       <main>
         <Box sx={{ width: '100%' }}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Box
+            sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: '#FFFFFF' }}
+          >
             <Tabs
               value={value}
               onChange={handleChange}

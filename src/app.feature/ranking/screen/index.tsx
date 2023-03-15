@@ -1,5 +1,5 @@
 import RecommandFriend from '../component/recommandFriend';
-import Sns from '../component/sns';
+import Sns from '../../../app.components/sns';
 import User from '../component/user';
 
 const Ranking: React.FC = () => {

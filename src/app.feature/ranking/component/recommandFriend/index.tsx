@@ -2,6 +2,7 @@ import * as S from './style';
 import { MdReplay } from 'react-icons/md';
 import { FaSadTear } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
+import Link from 'next/link';
 
 const RecommandFriend: React.FC = () => {
   return (
@@ -19,7 +20,9 @@ const RecommandFriend: React.FC = () => {
             새로고침하여 새로운 추천 친구 목록을 불러오세요!
           </div>
         </S.Nothing>
-        <BigButton content="더 많은 친구 보러가기" />
+        <Link href="/friend">
+          <BigButton content="더 많은 친구 보러가기" />
+        </Link>
       </S.Bottom>
     </S.Wrapper>
   );
