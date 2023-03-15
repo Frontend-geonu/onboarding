@@ -6,7 +6,6 @@ const Ranking: React.FC = () => {
   return (
     <>
       <User />
-      <Sns />
       <RecommandFriend />
     </>
   );
