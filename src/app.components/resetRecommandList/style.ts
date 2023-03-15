@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import { spin } from '@/app.styled/spin';
+import { MdReplay } from 'react-icons/md';
+import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
   background: rgb(231, 231, 231);
@@ -11,3 +13,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div``;
+
+export const Reset = styled(MdReplay)``;
+
+export const RotateReset = styled(MdReplay)`
+  animation: ${spin} 1s infinite;
+`;

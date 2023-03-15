@@ -4,8 +4,12 @@ import Search from '@/app.feature/friend/component/search';
 import * as S from './style';
 import { FaSadTear } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
+import { useState } from 'react';
+import useLoading from '@/app.hooks/loadingHook';
 
 const Friend: React.FC = () => {
+  const [isLoading, handleReset] = useLoading();
+
   return (
     <S.Wrapper>
       <Search />
@@ -18,17 +22,31 @@ const Friend: React.FC = () => {
             <BigButton content="친구 검색하러 가기" />
           </S.ButtonContainer>
         </S.Notice>
-
-        <Sns />
-        <ResetRecommandList />
-        <S.Notice>
-          <FaSadTear size={40} />
+        {isLoading ? (
           <div>
-            추천할 친구가 없어요.
-            <br />
-            새로고침하여 새로운 추천 친구 목록을 불러오세요!
+            <ResetRecommandList
+              isLoading={isLoading}
+              handleReset={handleReset}
+            />
+            loading ...
           </div>
-        </S.Notice>
+        ) : (
+          <>
+            <Sns />
+            <ResetRecommandList
+              isLoading={isLoading}
+              handleReset={handleReset}
+            />
+            <S.Notice>
+              <FaSadTear size={40} />
+              <div>
+                추천할 친구가 없어요.
+                <br />
+                새로고침하여 새로운 추천 친구 목록을 불러오세요!
+              </div>
+            </S.Notice>
+          </>
+        )}
       </S.Main>
     </S.Wrapper>
   );

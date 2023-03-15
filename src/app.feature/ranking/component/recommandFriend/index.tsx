@@ -1,16 +1,15 @@
 import * as S from './style';
-import { MdReplay } from 'react-icons/md';
 import { FaSadTear } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
 import Link from 'next/link';
+import useLoading from '@/app.hooks/loadingHook';
+import ResetRecommandList from '@/app.components/resetRecommandList';
 
 const RecommandFriend: React.FC = () => {
+  const [isLoading, handleReset] = useLoading();
   return (
     <S.Wrapper>
-      <S.Top>
-        <S.Writing>지금 친구신청이 가능한 친구를 소개합니다</S.Writing>
-        <MdReplay size={30} />
-      </S.Top>
+      <ResetRecommandList isLoading={isLoading} handleReset={handleReset} />
       <S.Bottom>
         <S.Nothing>
           <FaSadTear size={40} />
