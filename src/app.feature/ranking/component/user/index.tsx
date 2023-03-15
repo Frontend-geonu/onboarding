@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const User = () => {
+const User: React.FC = () => {
   return (
     <S.Wrapper>
       <S.Left>

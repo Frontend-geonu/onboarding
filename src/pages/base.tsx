@@ -2,7 +2,7 @@ interface IBaseLayout {
   children: React.ReactNode;
 }
 
-const BaseLayout = ({ children }: IBaseLayout) => {
+const BaseLayout: React.FC<IBaseLayout> = ({ children }: IBaseLayout) => {
   return <>{children}</>;
 };
 export default BaseLayout;

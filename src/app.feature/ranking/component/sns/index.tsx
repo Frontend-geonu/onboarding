@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const Sns = () => {
+const Sns: React.FC = () => {
   return (
     <S.Wrapper>
       <S.Writing>

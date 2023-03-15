@@ -2,15 +2,11 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { Box, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
-import styled from 'styled-components';
-
 import Invite from '@/app.feature/invite/screen';
 import Ranking from '@/app.feature/ranking/screen';
 import Request from '@/app.feature/request/screen';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export default function Home() {
+const Home: React.FC = () => {
   const [value, setValue] = useState('ranking');
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -48,4 +44,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
