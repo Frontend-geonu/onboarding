@@ -40,6 +40,18 @@ export const Icon = styled.img`
   width: 48px;
 `;
 
+export const EtcIcon = styled.div`
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: orange;
+  border-radius: 100px;
+`;
+
 export const RecommandCodeContainer = styled.div`
   display: flex;
   justify-content: space-between;

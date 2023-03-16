@@ -21,7 +21,13 @@ const Invite: React.FC = () => {
             페이스북
           </S.IconContainer>
           <S.IconContainer>
-            <S.Icon src="" alt="기타icon" />
+            <S.EtcIcon>
+              <img
+                style={{ width: '24px' }}
+                src="/images/ic-chain.png"
+                alt="🎸"
+              />
+            </S.EtcIcon>
             기타
           </S.IconContainer>
         </S.Social>
