@@ -25,7 +25,7 @@ const Invite: React.FC = () => {
               <img
                 style={{ width: '24px' }}
                 src="/images/ic-chain.png"
-                alt="🎸"
+                alt="기타"
               />
             </S.EtcIcon>
             기타
