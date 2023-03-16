@@ -1,16 +1,36 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
-import { Box, Tab, Tabs } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Invite from '@/app.feature/invite/screen';
 import Ranking from '@/app.feature/ranking/screen';
 import Request from '@/app.feature/request/screen';
+import TabBar from '@/app.components/tabBar';
+import styled from 'styled-components';
+import { slide } from '@/app.styled/slide';
+
+const options = [
+  {
+    id: 0,
+    value: '랭킹',
+  },
+  {
+    id: 1,
+    value: '친구 초대',
+  },
+  {
+    id: 2,
+    value: '받은 요청',
+  },
+];
+
+const SlideAnimation = styled.div`
+  animation: ${slide} 0.2s ease forwards;
+`;
 
 const Home: React.FC = () => {
-  const [value, setValue] = useState('ranking');
+  const [checkedOption, setCheckedOption] = useState(options[0].id);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
+  const handleChangeCheckedOption = (newValue: number) => {
+    setCheckedOption(newValue);
   };
 
   return (
@@ -22,27 +42,26 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Box sx={{ width: '100%' }}>
-          <Box
-            sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: '#FFFFFF' }}
-          >
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-              variant="fullWidth"
-              textColor="primary"
-              indicatorColor="primary"
-            >
-              <Tab label="랭킹" value="ranking" />
-              <Tab label="친구초대" value="invite" />
-              <Tab label="받은요청" value="request" />
-            </Tabs>
-          </Box>
-        </Box>
-        {value === 'ranking' && <Ranking />}
-        {value === 'invite' && <Invite />}
-        {value === 'request' && <Request />}
+        <TabBar
+          options={options}
+          checkedOption={checkedOption}
+          handleChangeCheckedOption={handleChangeCheckedOption}
+        />
+        {checkedOption === 0 && (
+          <SlideAnimation>
+            <Ranking />
+          </SlideAnimation>
+        )}
+        {checkedOption === 1 && (
+          <SlideAnimation>
+            <Invite />
+          </SlideAnimation>
+        )}
+        {checkedOption === 2 && (
+          <SlideAnimation>
+            <Request />
+          </SlideAnimation>
+        )}
       </main>
     </>
   );
