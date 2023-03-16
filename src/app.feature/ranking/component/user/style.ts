@@ -16,7 +16,12 @@ export const Left = styled.div`
   gap: 12px;
 `;
 
-export const Right = styled.div``;
+export const Right = styled.div`
+  width: 30%;
+
+  font-size: 0.75rem;
+  color: gray;
+`;
 
 export const Num = styled.div`
   font-weight: 700;
@@ -24,13 +29,16 @@ export const Num = styled.div`
 `;
 
 export const Profile = styled.img`
-  width: 48px;
+  width: 40px;
   border-radius: 50%;
+
+  border: 2px solid #efc93f;
 `;
 
 export const Id = styled.div``;
 export const Tag = styled.div`
   color: #888888;
+  font-size: 0.75rem;
 `;
 export const Bar = styled.div`
   border-bottom: 2px solid #888888;

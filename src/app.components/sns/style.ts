@@ -27,8 +27,8 @@ export const Notice = styled.div`
 
 export const Emphasis = styled.div`
   position: absolute;
-  bottom: 20px;
-  right: 0px;
+  bottom: 16px;
+  right: -8px;
 
   font-size: 0.5rem;
   font-weight: 500;
@@ -45,7 +45,7 @@ export const GoSns = styled.button`
   background: black;
   color: white;
 
-  padding: 4px 16px;
+  padding: 4px 20px 4px 16px;
 
   border: none;
   border-radius: 100px;

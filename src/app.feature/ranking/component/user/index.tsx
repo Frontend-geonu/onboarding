@@ -5,6 +5,7 @@ const User: React.FC = () => {
     <S.Wrapper>
       <S.Left>
         <S.Num>1</S.Num>
+        {/* TODO : 프로필에 왕관모양 추가하기 */}
         <S.Profile src="/images/kakao-default-profile.jpeg" alt="profile" />
         <S.UserInfo>
           <S.Id>나(test004)</S.Id>
