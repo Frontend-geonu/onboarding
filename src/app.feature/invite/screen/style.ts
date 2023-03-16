@@ -74,6 +74,8 @@ export const RecommandCodeCopy = styled.div`
   font-weight: 600;
 `;
 
-export const Bottom = styled.div`
+export const Bottom = styled.footer`
   padding: 16px;
+
+  font-size: 0.75rem;
 `;

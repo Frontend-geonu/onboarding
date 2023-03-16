@@ -38,7 +38,38 @@ const Invite: React.FC = () => {
         </S.RecommandCodeContainer>
         <img src="/images/img-addfriend-illust.png" alt="addfriend-illust" />
       </S.Middle>
-      <S.Bottom>이용 안내사항</S.Bottom>
+      <S.Bottom>
+        <h3>이용 안내 사항</h3>
+        <ol>
+          <li>친구에게 캐시워크 초대 링크를 공유합니다.</li>
+          <li>
+            공유한 링크를 통해 찬구가 신규 회원가입 시, 내 추천코드를
+            입력합니다.
+          </li>
+          <li>
+            <b style={{ color: 'red' }}>500캐시</b>가 적립됩니다.
+          </li>
+        </ol>
+        <h3>추가 안내 사항</h3>
+        <ol>
+          <li>친구가 신규가입자 일 경우에만 캐시가 지급이 됩니다.</li>
+          <li>
+            캐시 적립은 <b>최대 20명</b>까지 가능합니다.
+          </li>
+          <li>
+            20명을 초과하여 적립을 원하는 유저는{' '}
+            <b>
+              내 추천코드와 친구의 추천코드를 가입일 포함 3일 이내에
+              cs@cashwalk.io
+            </b>
+            로 남겨주시면 안내해 드리겠습니다.
+          </li>
+          <li>
+            부적절한 방법으로 캐시를 적립한 회원은 캐시 적립이 취소됩니다.
+          </li>
+        </ol>
+        <p>※ 해당 이벤트는 사전 예고없이 조기 종료 및 취소될 수 있습니다.</p>
+      </S.Bottom>
     </S.Wrapper>
   );
 };
