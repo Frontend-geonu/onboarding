@@ -25,7 +25,23 @@ export const Notice = styled.div`
   margin: 8px 0px;
 `;
 
+export const Emphasis = styled.div`
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+
+  font-size: 0.5rem;
+  font-weight: 500;
+
+  background-color: red;
+  border-radius: 8px;
+
+  padding: 2px;
+`;
+
 export const GoSns = styled.button`
+  position: relative;
+
   background: black;
   color: white;
 
