@@ -4,8 +4,8 @@ import Search from '@/app.feature/friend/component/search';
 import * as S from './style';
 import { FaSadTear } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
-import { useState } from 'react';
 import useLoading from '@/app.hooks/loadingHook';
+import Loading from '@/app.components/loading';
 
 const Friend: React.FC = () => {
   const [isLoading, handleReset] = useLoading();
@@ -23,13 +23,13 @@ const Friend: React.FC = () => {
           </S.ButtonContainer>
         </S.Notice>
         {isLoading ? (
-          <div>
+          <>
             <ResetRecommandList
               isLoading={isLoading}
               handleReset={handleReset}
             />
-            loading ...
-          </div>
+            <Loading />
+          </>
         ) : (
           <>
             <Sns />

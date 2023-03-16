@@ -18,3 +18,9 @@ export const Notice = styled.div`
   font-size: 1.125rem;
   color: #7c7c7c;
 `;
+
+export const LoadingContainer = styled.div`
+  text-align: center;
+
+  // TODO : 로딩컴포넌트의 세로 위치 잡기
+`;

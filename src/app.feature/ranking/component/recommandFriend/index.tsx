@@ -5,13 +5,17 @@ import Link from 'next/link';
 import useLoading from '@/app.hooks/loadingHook';
 import ResetRecommandList from '@/app.components/resetRecommandList';
 import Sns from '@/app.components/sns';
+import Loading from '@/app.components/loading';
 
 const RecommandFriend: React.FC = () => {
   const [isLoading, handleReset] = useLoading();
   return (
     <S.Wrapper>
       {isLoading ? (
-        <ResetRecommandList isLoading={isLoading} handleReset={handleReset} />
+        <>
+          <ResetRecommandList isLoading={isLoading} handleReset={handleReset} />
+          <Loading />
+        </>
       ) : (
         <>
           <Sns />
