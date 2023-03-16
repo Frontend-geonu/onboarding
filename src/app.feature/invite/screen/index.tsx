@@ -1,6 +1,11 @@
+import { handleCopyClipboard } from '@/app.modules/util/clipboard';
+import { useState } from 'react';
 import * as S from './style';
 
 const Invite: React.FC = () => {
+  // TODO : 추후 추천코드 생성방식에 따라 변경 필요
+  const [recommandCode, setRecommandCode] = useState('KRAGUC8');
+
   return (
     <S.Wrapper>
       <S.Top>
@@ -33,8 +38,12 @@ const Invite: React.FC = () => {
         </S.Social>
         <S.RecommandCodeContainer>
           <S.RecommandCodeTitle>내 추천코드</S.RecommandCodeTitle>
-          <S.RecommandCode>KRAGUC8</S.RecommandCode>
-          <S.RecommandCodeCopy>코드 복사하기</S.RecommandCodeCopy>
+          <S.RecommandCode>{recommandCode}</S.RecommandCode>
+          <S.RecommandCodeCopy
+            onClick={() => handleCopyClipboard(recommandCode)}
+          >
+            코드 복사하기
+          </S.RecommandCodeCopy>
         </S.RecommandCodeContainer>
         <img src="/images/img-addfriend-illust.png" alt="addfriend-illust" />
       </S.Middle>
