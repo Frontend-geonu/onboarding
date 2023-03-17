@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   background-color: rgb(156, 203, 253);
-  height: 108px;
+
   padding: 8px 16px;
 
   display: flex;
@@ -11,9 +11,7 @@ export const Wrapper = styled.div`
 
 export const Writing = styled.div``;
 
-export const Painting = styled.img`
-  width: 128px;
-`;
+export const Painting = styled.img``;
 
 export const Notice = styled.div`
   font-weight: 500;
