@@ -28,6 +28,19 @@ export const Num = styled.div`
   font-size: 1.25rem;
 `;
 
+export const ProfileContainer = styled.div`
+  position: relative;
+`;
+
+export const Crown = styled.img`
+  position: absolute;
+  width: 12px;
+  transform: rotate(-45deg);
+
+  top: -4px;
+  left: -2px;
+`;
+
 export const Profile = styled.img`
   width: 40px;
   border-radius: 50%;
