@@ -4,8 +4,7 @@ import Invite from '@/app.feature/invite/screen';
 import Ranking from '@/app.feature/ranking/screen';
 import Request from '@/app.feature/request/screen';
 import TabBar from '@/app.components/tabBar';
-import styled from 'styled-components';
-import { slide } from '@/app.styled/slide';
+import SlideAnimation from '@/app.components/slideAnimation';
 
 const options = [
   {
@@ -22,14 +21,19 @@ const options = [
   },
 ];
 
-const SlideAnimation = styled.div`
-  animation: ${slide} 0.2s ease forwards;
-`;
-
 const Home: React.FC = () => {
   const [checkedOption, setCheckedOption] = useState(options[0].id);
+  const [isSlideLeft, setIsSlideLeft] = useState(false);
 
-  const handleChangeCheckedOption = (newValue: number) => {
+  const handleChangeCheckedOption = (
+    checkedOption: number,
+    newValue: number
+  ) => {
+    if (checkedOption < newValue) {
+      setIsSlideLeft(false);
+    } else {
+      setIsSlideLeft(true);
+    }
     setCheckedOption(newValue);
   };
 
@@ -47,21 +51,18 @@ const Home: React.FC = () => {
           checkedOption={checkedOption}
           handleChangeCheckedOption={handleChangeCheckedOption}
         />
-        {checkedOption === 0 && (
-          <SlideAnimation>
-            <Ranking />
-          </SlideAnimation>
-        )}
-        {checkedOption === 1 && (
-          <SlideAnimation>
-            <Invite />
-          </SlideAnimation>
-        )}
-        {checkedOption === 2 && (
-          <SlideAnimation>
-            <Request />
-          </SlideAnimation>
-        )}
+
+        <SlideAnimation isSlideLeft={isSlideLeft} isView={checkedOption === 0}>
+          <Ranking />
+        </SlideAnimation>
+
+        <SlideAnimation isSlideLeft={isSlideLeft} isView={checkedOption === 1}>
+          <Invite />
+        </SlideAnimation>
+
+        <SlideAnimation isSlideLeft={isSlideLeft} isView={checkedOption === 2}>
+          <Request />
+        </SlideAnimation>
       </main>
     </>
   );

@@ -5,7 +5,7 @@ import { IFOption } from './type/TOption';
 interface IFProps {
   options: IFOption[];
   checkedOption: number;
-  handleChangeCheckedOption: (newValue: number) => void;
+  handleChangeCheckedOption: (checkedOption: number, newValue: number) => void;
 }
 
 const TabBar = ({
@@ -21,7 +21,7 @@ const TabBar = ({
             type="radio"
             name="tab"
             id={option.value}
-            onClick={() => handleChangeCheckedOption(option.id)}
+            onClick={() => handleChangeCheckedOption(checkedOption, option.id)}
             defaultChecked
           />
           <S.Tab htmlFor={option.value}>{option.value}</S.Tab>
