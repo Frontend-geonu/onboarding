@@ -48,3 +48,29 @@ npm run start
 │   └── index.tsx   // 메인 페이지
 └── styles
 ```
+
+## 구현된 부분
+
+- [x] 랭킹페이지
+  - [x] "더 많은 친구 보러가기" 클릭 시 추천친구 페이지 넘어가기
+  - [x] 새로고침버튼 클릭 시 로딩view 추가
+- [x] 친구초대페이지
+  - [x] 코드 복사기능
+- [x] 받은요청페이지
+- [x] 탭바 퍼블리싱
+- [x] 화면전환 시 slidein 효과 추가
+- [ ] 화면전환 시 slideout 효과 추가
+
+## 미리보기
+
+- 랭킹페이지
+
+  ![image](https://user-images.githubusercontent.com/127822057/225783204-3115a46b-f448-4615-af25-18c1f9db54ef.png)
+
+- 친구초대페이지
+
+  ![image](https://user-images.githubusercontent.com/127822057/225783294-59e8edc5-f588-4077-90a1-9d500327000e.png)
+
+- 받은요청페이지
+
+  ![image](https://user-images.githubusercontent.com/127822057/225783341-0244fd86-ca94-477c-88a1-d032096704c6.png)
