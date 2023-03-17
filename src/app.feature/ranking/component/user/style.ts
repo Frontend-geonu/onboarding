@@ -30,6 +30,8 @@ export const Num = styled.div`
 
 export const ProfileContainer = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
 `;
 
 export const Crown = styled.img`
