@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Invite from '@/app.feature/invite/screen';
-import Ranking from '@/app.feature/ranking/screen';
+import Ranking from '@/app.feature/ranking/screen/ScreenRanking';
 import Request from '@/app.feature/request/screen';
 import TabBar from '@/app.components/tabBar';
 import SlideAnimation from '@/app.components/slideAnimation';

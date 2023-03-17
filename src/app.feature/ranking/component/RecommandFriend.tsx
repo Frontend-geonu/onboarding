@@ -1,16 +1,16 @@
-import * as S from './style';
-import { FaSadTear } from 'react-icons/fa';
+import { FaSadTear as SadFace } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
 import Link from 'next/link';
 import useLoading from '@/app.hooks/loadingHook';
-import ResetRecommandList from '@/app.components/resetRecommandList';
-import Sns from '@/app.components/sns';
+import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
+import Sns from '@/app.feature/ranking/Sns';
 import Loading from '@/app.components/loading';
+import styled from 'styled-components';
 
 const RecommandFriend: React.FC = () => {
   const [isLoading, handleReset] = useLoading();
   return (
-    <S.Wrapper>
+    <StyledWrapper>
       {isLoading ? (
         <>
           <ResetRecommandList isLoading={isLoading} handleReset={handleReset} />
@@ -20,23 +20,34 @@ const RecommandFriend: React.FC = () => {
         <>
           <Sns />
           <ResetRecommandList isLoading={isLoading} handleReset={handleReset} />
-          <S.Bottom>
-            <S.Nothing>
-              <FaSadTear size={40} />
+          <div className="bottom">
+            <div className="nothing">
+              <SadFace size={40} />
               <div>
                 추천할 친구가 없어요.
                 <br />
                 새로고침하여 새로운 추천 친구 목록을 불러오세요!
               </div>
-            </S.Nothing>
+            </div>
             <Link href="/friend">
               <BigButton content="더 많은 친구 보러가기" />
             </Link>
-          </S.Bottom>
+          </div>
         </>
       )}
-    </S.Wrapper>
+    </StyledWrapper>
   );
 };
 
 export default RecommandFriend;
+
+const StyledWrapper = styled.div`
+  .bottom {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .nothing {
+    margin: 24px 0px;
+  }
+`;

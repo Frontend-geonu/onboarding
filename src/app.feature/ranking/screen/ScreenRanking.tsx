@@ -1,12 +1,12 @@
-import RecommandFriend from '../component/recommandFriend';
-import User from '../component/user';
+import RecommandFriend from '../component/RecommandFriend';
+import User from '../User';
 
 const Ranking: React.FC = () => {
   return (
-    <>
+    <div>
       <User />
       <RecommandFriend />
-    </>
+    </div>
   );
 };
 export default Ranking;

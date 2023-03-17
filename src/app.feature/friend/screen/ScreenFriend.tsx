@@ -1,5 +1,5 @@
-import ResetRecommandList from '@/app.components/resetRecommandList';
-import Sns from '@/app.components/sns';
+import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
+import Sns from '@/app.feature/ranking/Sns';
 import Search from '@/app.feature/friend/component/search';
 import { FaSadTear } from 'react-icons/fa';
 import BigButton from '@/app.components/bigButton';
