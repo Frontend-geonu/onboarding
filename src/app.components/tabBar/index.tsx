@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import * as S from './style';
 import { IFOption } from './type/TOption';
 

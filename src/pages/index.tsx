@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Invite from '@/app.feature/invite/screen';
 import Ranking from '@/app.feature/ranking/screen';
 import Request from '@/app.feature/request/screen';
