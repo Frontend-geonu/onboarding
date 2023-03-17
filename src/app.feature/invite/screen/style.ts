@@ -37,7 +37,6 @@ export const IconContainer = styled.div`
 
 export const Icon = styled.img`
   border-radius: 100px;
-  width: 48px;
 `;
 
 export const EtcIcon = styled.div`

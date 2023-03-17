@@ -27,11 +27,7 @@ const Invite: React.FC = () => {
           </S.IconContainer>
           <S.IconContainer>
             <S.EtcIcon>
-              <img
-                style={{ width: '24px' }}
-                src="/images/ic-chain.png"
-                alt="기타"
-              />
+              <img src="/images/ic-chain.png" alt="기타" />
             </S.EtcIcon>
             기타
           </S.IconContainer>
