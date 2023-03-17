@@ -7,7 +7,11 @@ interface IFProps {
   isView: boolean;
 }
 
-const SlideAnimation = ({ children, isSlideLeft, isView }: IFProps) => {
+const SlideAnimation: React.FC<IFProps> = ({
+  children,
+  isSlideLeft,
+  isView,
+}: IFProps) => {
   const [isRender, setIsRender] = useState(false);
 
   useEffect(() => {

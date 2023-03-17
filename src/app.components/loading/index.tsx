@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const Loading = () => {
+const Loading: React.FC = () => {
   return (
     <S.Wrapper>
       <S.CircleContainer viewBox="25 25 50 50">

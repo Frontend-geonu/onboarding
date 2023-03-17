@@ -8,7 +8,7 @@ interface IFProps {
   handleChangeCheckedOption: (checkedOption: number, newValue: number) => void;
 }
 
-const TabBar = ({
+const TabBar: React.FC<IFProps> = ({
   options,
   checkedOption,
   handleChangeCheckedOption,
