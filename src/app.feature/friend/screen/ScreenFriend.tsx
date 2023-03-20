@@ -1,5 +1,5 @@
 import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
-import Sns from '@/app.feature/ranking/Sns';
+import Sns from '@/app.feature/ranking/component/Sns';
 import Search from '@/app.feature/friend/component/search/Search';
 import { FaSadTear as SadFace } from 'react-icons/fa';
 import Button from '@/app.components/button/CommonButton';

@@ -3,7 +3,7 @@ import Button from '@/app.components/button/CommonButton';
 import Link from 'next/link';
 import useLoading from '@/app.hooks/loadingHook';
 import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
-import Sns from '@/app.feature/ranking/Sns';
+import Sns from '@/app.feature/ranking/component/Sns';
 import Loading from '@/app.components/loading/CommonLoading';
 import styled from 'styled-components';
 
