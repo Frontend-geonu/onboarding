@@ -1,7 +1,7 @@
 import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
 import Sns from '@/app.feature/ranking/Sns';
 import Search from '@/app.feature/friend/component/search/Search';
-import { FaSadTear } from 'react-icons/fa';
+import { FaSadTear as SadFace } from 'react-icons/fa';
 import Button from '@/app.components/button/CommonButton';
 import useLoading from '@/app.hooks/loadingHook';
 
@@ -39,7 +39,7 @@ const ScreenFriend: React.FC = () => {
               handleReset={handleReset}
             />
             <div className="notice">
-              <FaSadTear size={40} />
+              <SadFace size={40} />
               <div>
                 추천할 친구가 없어요.
                 <br />
