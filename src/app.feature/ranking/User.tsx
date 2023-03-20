@@ -65,7 +65,7 @@ const StyledWrapper = styled.div`
       width: 40px;
       border-radius: 50%;
 
-      border: 2px solid #efc93f;
+      border: 2px solid var(--gold);
     }
   }
 
@@ -74,12 +74,12 @@ const StyledWrapper = styled.div`
     flex-direction: column;
 
     .tag {
-      color: #888888;
+      color: var(--heavy-gray);
       font-size: 0.75rem;
     }
 
     .bar {
-      border-bottom: 2px solid #888888;
+      border-bottom: 2px solid var(--heavy-gray);
       width: 140%;
     }
   }

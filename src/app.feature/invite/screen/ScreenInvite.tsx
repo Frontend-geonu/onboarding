@@ -108,7 +108,7 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    background: #371804;
+    background: var(--orange-dark-brown);
     border-radius: 16px;
 
     padding: 24px 16px;
@@ -147,7 +147,7 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #251b02;
+    background-color: var(--heavy-dark-brown);
     padding: 16px;
     border-radius: 8px;
   }

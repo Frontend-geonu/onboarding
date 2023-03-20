@@ -8,3 +8,12 @@ body {
 
   height: 100vh;
 }
+
+:root {
+  --dark-brown: #534546;
+  --orange-dark-brown: #371804;
+  --heavy-dark-brown: #251b02;
+  --light-gray: #d4d4d4;
+  --heavy-gray: #888888;
+  --gold: #efc93f;
+}

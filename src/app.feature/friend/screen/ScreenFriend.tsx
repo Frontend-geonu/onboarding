@@ -1,6 +1,6 @@
 import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
 import Sns from '@/app.feature/ranking/Sns';
-import Search from '@/app.feature/friend/component/search';
+import Search from '@/app.feature/friend/component/search/Search';
 import { FaSadTear } from 'react-icons/fa';
 import Button from '@/app.components/button/CommonButton';
 import useLoading from '@/app.hooks/loadingHook';
@@ -24,7 +24,7 @@ export const Notice = styled.div`
   background: white;
 
   font-size: 1.125rem;
-  color: #7c7c7c;
+  color: var(--heavy-gray);
 `;
 
 export const LoadingContainer = styled.div`

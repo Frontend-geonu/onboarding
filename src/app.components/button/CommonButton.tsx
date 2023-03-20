@@ -5,7 +5,10 @@ interface IFProps {
   color?: string;
 }
 
-const Button: React.FC<IFProps> = ({ content, color = '#8E8E8E' }: IFProps) => {
+const Button: React.FC<IFProps> = ({
+  content,
+  color = 'var(--light-gray)',
+}: IFProps) => {
   return <StyledWrapper color={color}>{content}</StyledWrapper>;
 };
 export default Button;
