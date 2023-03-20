@@ -5,7 +5,7 @@ const User: React.FC = () => {
     <StyledWrapper>
       <div className="left">
         <>1</>
-        <div className="profile-container">
+        <div className="profile-wrapper">
           <img className="crown" src="/images/crown.png" alt="crown" />
           <img
             className="profile"
@@ -13,7 +13,7 @@ const User: React.FC = () => {
             alt="profile"
           />
         </div>
-        <div>
+        <div className="info-wrapper">
           <span>나(test004)</span>
           <span className="tag">#Dd</span>
           <span className="bar"></span>
@@ -47,7 +47,7 @@ const StyledWrapper = styled.div`
     color: gray;
   }
 
-  .profile-container {
+  .profile-wrapper {
     position: relative;
     display: flex;
     align-items: center;
@@ -69,13 +69,18 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .tag {
-    color: #888888;
-    font-size: 0.75rem;
-  }
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
 
-  .bar {
-    border-bottom: 2px solid #888888;
-    width: 140%;
+    .tag {
+      color: #888888;
+      font-size: 0.75rem;
+    }
+
+    .bar {
+      border-bottom: 2px solid #888888;
+      width: 140%;
+    }
   }
 `;

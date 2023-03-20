@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import Invite from '@/app.feature/invite/screen';
+import Invite from '@/app.feature/invite/screen/ScreenInvite';
 import Ranking from '@/app.feature/ranking/screen/ScreenRanking';
 import Request from '@/app.feature/request/screen';
 import TabBar from '@/app.components/tabBar';

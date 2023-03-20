@@ -1,49 +1,65 @@
 import { handleCopyClipboard } from '@/app.modules/util/clipboard';
 import { useState } from 'react';
-import * as S from './style';
+import styled from 'styled-components';
 
 const Invite: React.FC = () => {
   // TODO : 추후 추천코드 생성방식에 따라 변경 필요
   const [recommandCode, setRecommandCode] = useState('KRAGUC8');
 
   return (
-    <S.Wrapper>
-      <S.Top>
-        <img src="/images/img-addfriend-text.png" alt="addfriend-text" />
-      </S.Top>
-      <S.Middle>
-        <S.Social>
-          <S.IconContainer>
-            <S.Icon src="/images/ic-kakaotalk.png" alt="kakaotalk" />
+    <StyledWrapper>
+      <div className="top">
+        <img
+          src="/images/img-addfriend-text.png"
+          alt="친구초대하고 500캐시 받자!"
+        />
+      </div>
+      <div className="middle">
+        <div className="social">
+          <span className="icon-wrapper">
+            <img
+              className="icon"
+              src="/images/ic-kakaotalk.png"
+              alt="카카오톡 바로가기"
+            />
             카카오톡
-          </S.IconContainer>
-          <S.IconContainer>
-            <S.Icon src="/images/ic-band.png" alt="band" />
+          </span>
+          <span className="icon-wrapper">
+            <img
+              className="icon"
+              src="/images/ic-band.png"
+              alt="밴드 바로가기"
+            />
             밴드
-          </S.IconContainer>
-          <S.IconContainer>
-            <S.Icon src="/images/ic-facebook.png" alt="facebook" />
+          </span>
+          <span className="icon-wrapper">
+            <img
+              className="icon"
+              src="/images/ic-facebook.png"
+              alt="페이스북 바로가기"
+            />
             페이스북
-          </S.IconContainer>
-          <S.IconContainer>
-            <S.EtcIcon>
-              <img src="/images/ic-chain.png" alt="기타" />
-            </S.EtcIcon>
+          </span>
+          <span className="icon-wrapper">
+            <div className="etc-icon">
+              <img src="/images/ic-chain.png" alt="기타 바로가기" />
+            </div>
             기타
-          </S.IconContainer>
-        </S.Social>
-        <S.RecommandCodeContainer>
-          <S.RecommandCodeTitle>내 추천코드</S.RecommandCodeTitle>
-          <S.RecommandCode>{recommandCode}</S.RecommandCode>
-          <S.RecommandCodeCopy
+          </span>
+        </div>
+        <div className="recommand-code-wrapper">
+          <span>내 추천코드</span>
+          <p className="recommand-code">{recommandCode}</p>
+          <button
+            className="recommand-code-copy"
             onClick={() => handleCopyClipboard(recommandCode)}
           >
             코드 복사하기
-          </S.RecommandCodeCopy>
-        </S.RecommandCodeContainer>
-        <img src="/images/img-addfriend-illust.png" alt="addfriend-illust" />
-      </S.Middle>
-      <S.Bottom>
+          </button>
+        </div>
+        <img src="/images/img-addfriend-illust.png" alt="너도 나도 500캐시" />
+      </div>
+      <footer className="bottom">
         <h3>이용 안내 사항</h3>
         <ol>
           <li>친구에게 캐시워크 초대 링크를 공유합니다.</li>
@@ -74,8 +90,87 @@ const Invite: React.FC = () => {
           </li>
         </ol>
         <p>※ 해당 이벤트는 사전 예고없이 조기 종료 및 취소될 수 있습니다.</p>
-      </S.Bottom>
-    </S.Wrapper>
+      </footer>
+    </StyledWrapper>
   );
 };
 export default Invite;
+
+const StyledWrapper = styled.div`
+  .top {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #371804;
+    border-radius: 16px;
+
+    padding: 24px 16px;
+
+    color: white;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 0.75rem;
+  }
+
+  .etc-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: orange;
+
+    border-radius: 8px;
+  }
+
+  .recommand-code-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #251b02;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .recommand-code {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .recommand-code-copy {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    text-decoration: underline;
+    color: yellow;
+
+    font-weight: 600;
+  }
+
+  .bottom {
+    padding: 16px;
+
+    font-size: 0.75rem;
+  }
+`;
