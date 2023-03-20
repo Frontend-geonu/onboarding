@@ -1,5 +1,6 @@
+import { slideLeft, slideRight } from '@/app.styled/slide';
 import { useEffect, useState } from 'react';
-import * as S from './style';
+import styled from 'styled-components';
 
 interface IFProps {
   children: React.ReactNode;
@@ -23,9 +24,16 @@ const SlideAnimation: React.FC<IFProps> = ({
   }, [isView]);
 
   return (
-    <S.Wrapper isRender={isRender} isSlideLeft={isSlideLeft}>
+    <StyledWrapper isRender={isRender} isSlideLeft={isSlideLeft}>
       {children}
-    </S.Wrapper>
+    </StyledWrapper>
   );
 };
 export default SlideAnimation;
+
+const StyledWrapper = styled.div<{ isRender: boolean; isSlideLeft: boolean }>`
+  display: ${({ isRender }) => (isRender ? 'block' : 'none')};
+
+  animation: ${({ isSlideLeft }) => (isSlideLeft ? slideLeft : slideRight)} 0.2s
+    ease forwards;
+`;

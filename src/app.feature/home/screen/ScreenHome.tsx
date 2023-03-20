@@ -4,7 +4,7 @@ import Invite from '@/app.feature/invite/screen/ScreenInvite';
 import Ranking from '@/app.feature/ranking/screen/ScreenRanking';
 import Request from '@/app.feature/request/screen';
 import TabBar from '@/app.components/tabBar';
-import SlideAnimation from '@/app.components/slideAnimation';
+import SlideAnimation from '@/app.components/slideAnimation/CommonSlideAnimation';
 
 const options = [
   {

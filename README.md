@@ -17,7 +17,7 @@ npm run start
 
 ```
 ├── app.components
-│   ├── bigButton   // 버튼 컴포넌트 공통화
+│   ├── Button   // 버튼 컴포넌트 공통화
 │   ├── loading     //로딩 컴포넌트
 │   ├── recommandList          // 추천친구 리스트 컴포넌트
 │   ├── resetRecommandList     // 추천친구 새로고침 컴포넌트

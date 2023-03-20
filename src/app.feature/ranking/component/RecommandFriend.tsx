@@ -1,10 +1,10 @@
 import { FaSadTear as SadFace } from 'react-icons/fa';
-import BigButton from '@/app.components/bigButton';
+import Button from '@/app.components/button/CommonButton';
 import Link from 'next/link';
 import useLoading from '@/app.hooks/loadingHook';
 import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandList';
 import Sns from '@/app.feature/ranking/Sns';
-import Loading from '@/app.components/loading';
+import Loading from '@/app.components/loading/CommonLoading';
 import styled from 'styled-components';
 
 const RecommandFriend: React.FC = () => {
@@ -30,7 +30,7 @@ const RecommandFriend: React.FC = () => {
               </div>
             </div>
             <Link href="/friend">
-              <BigButton content="더 많은 친구 보러가기" />
+              <Button content="더 많은 친구 보러가기" />
             </Link>
           </div>
         </>

@@ -2,10 +2,11 @@ import ResetRecommandList from '@/app.feature/ranking/component/ResetRecommandLi
 import Sns from '@/app.feature/ranking/Sns';
 import Search from '@/app.feature/friend/component/search';
 import { FaSadTear } from 'react-icons/fa';
-import BigButton from '@/app.components/bigButton';
+import Button from '@/app.components/button/CommonButton';
 import useLoading from '@/app.hooks/loadingHook';
-import Loading from '@/app.components/loading';
+
 import styled from 'styled-components';
+import Loading from '@/app.components/loading/CommonLoading';
 
 export const Wrapper = styled.div``;
 
@@ -44,7 +45,7 @@ const ScreenFriend: React.FC = () => {
           이미 친구인 사용자를 검색하고
           <br /> 싶다면 아래의 버튼을 선택해주세요
           <ButtonContainer>
-            <BigButton content="친구 검색하러 가기" />
+            <Button content="친구 검색하러 가기" />
           </ButtonContainer>
         </Notice>
         {isLoading ? (
