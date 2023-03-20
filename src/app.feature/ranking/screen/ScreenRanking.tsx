@@ -1,5 +1,5 @@
 import RecommandFriend from '../component/RecommandFriend';
-import User from '../User';
+import User from '../component/User';
 
 const Ranking: React.FC = () => {
   return (
